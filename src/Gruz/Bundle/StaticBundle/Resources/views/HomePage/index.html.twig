@@ -1,0 +1,28 @@
+{% extends('GruzStaticBundle::layout.html.twig') %}
+
+{% block stylesheets %}
+    {% stylesheets 'bundles/gruzstatic/css/homePage.css' filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+    {% stylesheets 'bundles/gruzstatic/css/bootstrap.css' filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block page_content %}
+    <div class="page-content">
+        <h1>Bienvenue sur la page d'accueil de la famille Gruzelle !</h1>
+
+        <img src="{{ asset('bundles/gruzstatic/images/les-gruz.jpg') }}" />
+
+        <blockquote>
+            <p>Le bonheur, c'est d'avoir une grande famille, soudée, attentionnée et protectrice... dans une autre ville.</p>
+            <footer>Georges Burns</footer>
+        </blockquote>
+        <blockquote class="blockquote-reverse">
+            <p>La place du père dans la famille urbaine moderne est restreinte, particulièrement si ce dernier joue au golf.</p>
+            <footer>Bertrand Russel</footer>
+        </blockquote>
+    </div>
+{% endblock %}
+

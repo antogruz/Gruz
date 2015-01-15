@@ -1,0 +1,42 @@
+{% extends('::base.html.twig') %}
+
+{% block body %}
+
+    {% block flash_messages %}
+        <div class="notification">
+            {% for notice in app.session.flashBag.get('notice') %}
+                <div class="alert alert-info">
+                    {{ notice }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endblock %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                {% block menu %}
+                    <h1> Ceci est le menu </h1>
+                {% endblock %}
+            </div>
+
+            <div class="col-md-8">
+                {% block page_content %}{% endblock %}
+            </div>
+        </div>
+
+    {% block footer %}
+        <div class="row footer">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                Ceci est un footer. En général, on en met avec des liens vers les mentions légales par exemple.
+            </div>
+        </div>
+    {% endblock %}
+    </div>
+
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

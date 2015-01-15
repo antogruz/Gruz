@@ -1,0 +1,8 @@
+gruz_static:
+    resource: "@GruzStaticBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation

@@ -1,0 +1,16 @@
+body {
+    background-image: url(../images/fond.jpeg);
+}
+
+.page-content {
+    color: #ff7c0a;
+}
+
+blockquote {
+    color: #effffc ;
+}
+
+.footer {
+    color: #ff7c0a;
+    margin-bottom: 10px;
+}
