@@ -1,0 +1,31 @@
+{% block stylesheets %}
+    {% stylesheets 'bundles/gruzstatic/css/menu.css' filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+    {% stylesheets 'bundles/gruzstatic/css/bootstrap.css' filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock %}
+
+<div>
+    <img src="{{ asset('bundles/gruzstatic/images/logo.png') }}" class="logo" />
+</div>
+
+{% import _self as menu_item %}
+{% macro menu_item(name, icon, href) %}
+    <li role="presentation" class="text-center menu-block">
+        <a href="{{ href }}">
+            <div class="icon">
+                <span class="glyphicon {{ icon }}"></span>
+                {{ name }}
+            </div>
+        </a>
+    </li>
+{% endmacro %}
+
+<ul class="nav nav-pills nav-stacked">
+    {{ menu_item.menu_item('Connexion', 'glyphicon-user', '#') }}
+    {{ menu_item.menu_item('Mon Compte', 'glyphicon-home', '#') }}
+    {{ menu_item.menu_item('Les Gruz', 'glyphicon-thumbs-up', '#') }}
+    {{ menu_item.menu_item("Je n'ai pas de compte", 'glyphicon-phone-alt', '#') }}
+</ul>

@@ -1,0 +1,13 @@
+.menu-block {
+    color: #ff7c0a;
+}
+
+a {
+    color: #ff7c0a !important;
+}
+
+.logo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
